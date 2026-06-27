@@ -1450,7 +1450,7 @@ cat("3. View comparison: print(results$comparison_table)\n")
 cat("4. Make new predictions: Use predict() on the best model\n")
 
 cat("\n", strrep("=", 80), "\n", sep = "")
-cat("✅ STEP 8 COMPLETED SUCCESSFULLY!\n")
+cat(" STEP 8 COMPLETED SUCCESSFULLY!\n")
 cat(strrep("=", 80), "\n", sep = "")
 
 
@@ -1587,7 +1587,7 @@ if (length(results_list) >= 4) {
 }
 
 cat("\n", strrep("=", 80), "\n", sep = "")
-cat("✅ STEP 9 COMPLETED!\n")
+cat(" STEP 9 COMPLETED!\n")
 cat(strrep("=", 80), "\n", sep = "")
 
 plot_model_comparison <- function(results_list) {
@@ -1932,7 +1932,7 @@ create_diagnostic_tool <- function(model, model_name) {
       cat(sprintf("Malignancy Score:    %.4f\n", prediction))
       cat(sprintf("Threshold:           %.2f\n", threshold))
       cat(sprintf("Prediction:          %s\n", 
-                  ifelse(is_malignant, "⚠️ MALIGNANT", "✅ NON-MALIGNANT")))
+                  ifelse(is_malignant, "⚠️ MALIGNANT", " NON-MALIGNANT")))
       cat(sprintf("Confidence:          %.1f%%\n", confidence))
       cat(sprintf("Risk Level:          %s\n", risk_level))
       cat(sprintf("Recommendation:      %s\n", recommendation))
@@ -1954,7 +1954,7 @@ create_diagnostic_tool <- function(model, model_name) {
         timestamp = Sys.time()
       )
       
-      cat("\n✅ Diagnosis complete!\n")
+      cat("\n Diagnosis complete!\n")
       
       return(diagnosis)
       
@@ -1973,7 +1973,7 @@ create_diagnostic_tool <- function(model, model_name) {
 
 # Create the diagnostic tool
 diagnostic_tool <- create_diagnostic_tool(diagnostic_model, diagnostic_model_name)
-cat(sprintf("\n✅ Diagnostic tool created using %s model\n", diagnostic_model_name))
+cat(sprintf("\n Diagnostic tool created using %s model\n", diagnostic_model_name))
 
 # Test the diagnostic tool
 cat("\n", strrep("=", 80), "\n", sep = "")
@@ -2140,7 +2140,7 @@ batch_diagnose <- function(image_paths, threshold = 0.5, save_results = FALSE) {
   }
 }
 
-cat("\n✅ Diagnostic tool ready for use!\n")
+cat("\nDiagnostic tool ready for use!\n")
 cat("\nAvailable functions:\n")
 cat("1. diagnostic_tool(\"path/to/image.png\") - Diagnose single image\n")
 cat("2. batch_diagnose(image_paths_vector) - Diagnose multiple images\n")
@@ -2153,7 +2153,7 @@ cat("# image_paths <- c(\"image1.png\", \"image2.png\", \"image3.png\")\n")
 cat("# batch_results <- batch_diagnose(image_paths, save_results = TRUE)\n")
 
 cat("\n", strrep("=", 80), "\n", sep = "")
-cat("✅ STEP 11 COMPLETED SUCCESSFULLY!\n")
+cat(" STEP 11 COMPLETED SUCCESSFULLY!\n")
 cat(strrep("=", 80), "\n", sep = "")
 
 
@@ -2411,6 +2411,6 @@ if (is.data.frame(final_report$model_performance)) {
 
 
 cat("\n", strrep("*", 80), "\n", sep = "")
-cat("✅ ENHANCED BREAST CANCER ULTRASOUND ANALYSIS PIPELINE COMPLETED SUCCESSFULLY!\n")
+cat("ENHANCED BREAST CANCER ULTRASOUND ANALYSIS PIPELINE COMPLETED SUCCESSFULLY!\n")
 cat(strrep("*", 80), "\n", sep = "")
 
